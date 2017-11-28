@@ -1,5 +1,5 @@
 #Note: I didn't get the cvs, after I activated the virtual environment I wrote all this code in the command prompt 
-to do this just write
+to do this just write. You can also use Notepad++ but writing in CMD extracted something from the website.
 
 python
 
