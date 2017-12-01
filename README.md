@@ -1,21 +1,24 @@
-#Note: I didn't get the cvs, after I activated the virtual environment I wrote all this code in the command prompt 
-to do this just write. You can also use Notepad++ but writing in CMD extracted something from the website.
+Note: I didn't get the cvs, after I activated the virtual environment I wrote all this code in the command prompt 
+to do this just write:
 
-python
+## python 
 
 after activating virtual environment.
 
-# scraping
-# 1) go to your cmd, and type in:
+Note: I'm using python 2.7.14
+
+## ok, let's get to business!
+
+ 1) go to your cmd, and type in:
 easy_install pip  
 pip install BeautifulSoup4
 
-# Be sure to activate virtual environment.
+Be sure to activate virtual environment.
 
-2.) In notepad++ (python) write the code below:
+2.) In notepad++ make sure you're in python mode and write the code below:
 
-# import libraries
-import urllib2  # (start here)
+# importing libraries
+import urllib2  <--------- (start here)
 
 from bs4 import BeautifulSoup
 
