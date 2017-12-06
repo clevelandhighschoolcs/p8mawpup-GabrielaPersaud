@@ -22,7 +22,7 @@ import urllib2  <--------- (start here)
 
 from bs4 import BeautifulSoup
 
-quote_page = 'https://www.amazon.com/Jimmy-Paddox-Leather-Black-Biker/dp/B0771TB2Y1/ref=sr_1_9?s=apparel&ie=UTF8&qid=1511230028&sr=1-9&nodeID=7141123011&psd=1'
+quote_page = 'https://www.amazon.com/Jimmy-Paddox-Leather-Black-Biker/dp/B0771TB2Y1/ref=sr_1_9?s=apparel&ie=UTF8&qid=1511230028&sr=1-9&nodeID=7141123011&psd=1' <----- click the link, and get the link from the official website. DO NOT USE THIS ONE EVEN THOUGH IT'S THE SAME,or you'll get an error in your cmd.
 
 page = urllib2.urlopen(quote_page)
 
