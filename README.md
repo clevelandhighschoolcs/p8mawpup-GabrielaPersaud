@@ -18,17 +18,17 @@ Be sure to activate virtual environment.
 2.) In notepad++ make sure you're in python mode and write the code below:
 
 # importing libraries
-import urllib2  <--------- (start here)
+import urllib2 
 
 from bs4 import BeautifulSoup
 
-quote_page = 'https://www.amazon.com/Jimmy-Paddox-Leather-Black-Biker/dp/B0771TB2Y1/ref=sr_1_9?s=apparel&ie=UTF8&qid=1511230028&sr=1-9&nodeID=7141123011&psd=1' <----- click the link, and get the link from the official website. DO NOT USE THIS ONE EVEN THOUGH IT'S THE SAME,or you'll get an error in your cmd.
+quote_page = 'https://www.amazon.com/Jimmy-Paddox-Leather-Black-Biker/dp/B0771TB2Y1/ref=sr_1_9?s=apparel&ie=UTF8&qid=1511230028&sr=1-9&nodeID=7141123011&psd=1' 
 
 page = urllib2.urlopen(quote_page)
 
 soup = BeautifulSoup(page, 'html.parser')
 
-title_box = soup.find('h1', attrs={'id': 'title'}) 
+title_box = soup.find('h1', attrs={'id': 'title'})
 
 title = title_box.text.strip()
 
@@ -40,4 +40,17 @@ priceblock_ourprice = priceblock_ourprice_box.text
 
 print priceblock_ourprice
 
+#Import Twilio (pip install twilio)
+from twilio.rest import Client
 
+account_sid = 'xxx'
+auth_token = 'xxx'
+
+client = Client(account_sid, auth_token)
+
+#Text the information via Twilio
+body = title + ', ' + priceblock_ourprice
+message = client.messages.create(
+   	to="+your phone number",
+    from_="twilio phone number",
+    body=body)
