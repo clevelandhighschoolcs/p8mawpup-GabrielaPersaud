@@ -7,7 +7,7 @@ after activating virtual environment.
 
 Note: I'm using python 2.7.14
 
-## ok, let's get to business!
+## ok, let's get down to business!
 
  1) go to your cmd, and type in:
 easy_install pip  
